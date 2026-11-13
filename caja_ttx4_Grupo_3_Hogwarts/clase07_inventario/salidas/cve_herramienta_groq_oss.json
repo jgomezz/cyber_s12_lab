@@ -1,0 +1,101 @@
+[
+ {
+  "Activo": "backup-nas-01",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2021-41773",
+  "Producto": "Apache",
+  "Versión": "2.4.49",
+  "CVSS": 7.5,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "backup-nas-01",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2021-42013",
+  "Producto": "Apache",
+  "Versión": "2.4.49",
+  "CVSS": 9.8,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "api-integracion",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2021-23017",
+  "Producto": "nginx",
+  "Versión": "1.18.0",
+  "CVSS": 7.7,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "api-integracion",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2022-3602",
+  "Producto": "OpenSSL",
+  "Versión": "3.0.2",
+  "CVSS": 7.5,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "jump-host-01",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2024-6387",
+  "Producto": "OpenSSH",
+  "Versión": "8.9p1",
+  "CVSS": 8.1,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "jump-host-01",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2023-38408",
+  "Producto": "OpenSSH",
+  "Versión": "8.9p1",
+  "CVSS": 9.8,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "lab-pruebas-07",
+  "Criticidad": "Baja",
+  "CVE": "CVE-2020-1938",
+  "Producto": "Tomcat",
+  "Versión": "9.0.30",
+  "CVSS": 9.8,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "lab-pruebas-07",
+  "Criticidad": "Baja",
+  "CVE": "CVE-2021-44228",
+  "Producto": "log4j-core",
+  "Versión": "2.14.1",
+  "CVSS": 10.0,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "lab-pruebas-07",
+  "Criticidad": "Baja",
+  "CVE": "CVE-2021-45046",
+  "Producto": "log4j-core",
+  "Versión": "2.14.1",
+  "CVSS": 9.0,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "grafana-mon",
+  "Criticidad": "Media",
+  "CVE": "CVE-2021-43798",
+  "Producto": "Grafana",
+  "Versión": "8.2.6",
+  "CVSS": 7.5,
+  "¿Lo devolvió la herramienta?": "Sí"
+ },
+ {
+  "Activo": "jenkins-ci",
+  "Criticidad": "Alta",
+  "CVE": "CVE-2024-23897",
+  "Producto": "Jenkins LTS",
+  "Versión": "2.426.1",
+  "CVSS": 9.8,
+  "¿Lo devolvió la herramienta?": "Sí"
+ }
+]

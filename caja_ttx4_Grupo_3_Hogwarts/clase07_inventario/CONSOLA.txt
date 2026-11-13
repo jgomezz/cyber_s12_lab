@@ -1,0 +1,138 @@
+(venv) (base) developer@Developers-MacBook-Pro clase07_inventario % python escalon_1_normalizar.py
+Normalizando 12 registros con 'groq_oss'
+
+  CMDB-0101  sga-app-02           Alta   0 software  ok (1 intento)  (0.9 s)
+  SCAN-301   vpn-gw-prov          Baja   1 software  ok (1 intento)  (1.7 s)
+  TI-210     backup-nas-01        Alta   1 software  ok (1 intento)  (1.4 s)
+  TI-211     files-01             Alta   0 software  ok (1 intento)  (1.2 s)
+  CMDB-0102  files-02             Alta   0 software  ok (1 intento)  (1.4 s)
+  SCAN-305   api-integracion      Alta   2 software  ok (1 intento)  (1.4 s)
+  TI-215     jump-host-01         Alta   1 software  ok (1 intento)  (1.5 s)
+  TI-220     lab-pruebas-07       Baja   2 software  ok (1 intento)  (1.4 s)
+  CMDB-0110  grafana-mon          Media  1 software  ok (1 intento)  (1.1 s)
+  TI-230     jenkins-ci           Alta   1 software  ok (1 intento)  (1.9 s)
+    (límite por minuto del proveedor: espero 20 s y reintento)
+  TI-240     nb-conta-03          Baja   1 software  ok (1 intento)  (21.3 s)
+  SCAN-306   api-integracion      Alta   1 software  ok (1 intento)  (1.4 s)
+
+12 registros -> 11 activos únicos · 37 s
+Aciertos frente a la referencia: tipo 100% · entorno 64% · criticidad 91%
+Celdas neutralizadas antes de escribir el Excel (LLM10): 0
+Inventario en salidas/inventario_groq_oss.xlsx (hojas Inventario y Evaluación)
+(venv) (base) developer@Developers-MacBook-Pro clase07_inventario % python escalon_2_herramienta.py
+[01]   0.00s  INFO   lanzo el servidor MCP como otro proceso: python mcp_servidor_cve.py (transporte stdio)
+[02]   0.01s  MCP →  initialize (petición id=0)
+[servidor] iniciado: espero mensajes JSON-RPC por stdin
+[03]   0.26s  MCP ←  respuesta id=0: servidor 'andina-cve', protocolo 2025-11-25
+[04]   0.26s  MCP →  notifications/initialized (notificación)
+[05]   0.26s  MCP →  tools/list (petición id=1)
+[06]   0.26s  MCP ←  respuesta id=1: 1 herramienta(s): buscar_cve
+[07]   0.26s  INFO   así queda la herramienta en el formato que recibe el modelo
+[08]   0.26s  INFO   ── activo backup-nas-01: Apache 2.4.49
+[09]   0.26s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[10]   0.99s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"Apache","version":"2.4.49"})
+[11]   0.99s  MCP →  tools/call (petición id=2)  buscar_cve({"producto": "Apache", "version": "2.4.49"})
+[servidor] recibí tools/call buscar_cve(producto='Apache', version='2.4.49')
+[servidor] devuelvo 2 CVE (CVE-2021-41773, CVE-2021-42013) · 356 caracteres · 0.2 ms
+[12]   1.00s  MCP ←  respuesta id=2: 2 CVE (CVE-2021-41773, CVE-2021-42013)
+[13]   1.00s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[14]   1.85s  LLM ←  respuesta final, sin pedir herramientas
+  backup-nas-01        1 llamadas · 2 CVE reportados de 2 esperados (1.6 s)
+[15]   1.86s  INFO   ── activo api-integracion: nginx 1.18.0, OpenSSL 3.0.2
+[16]   1.86s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[17]   2.65s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"nginx","version":"1.18.0"})
+[18]   2.66s  MCP →  tools/call (petición id=3)  buscar_cve({"producto": "nginx", "version": "1.18.0"})
+[servidor] recibí tools/call buscar_cve(producto='nginx', version='1.18.0')
+[servidor] devuelvo 1 CVE (CVE-2021-23017) · 193 caracteres · 0.1 ms
+[19]   2.66s  MCP ←  respuesta id=3: 1 CVE (CVE-2021-23017)
+[20]   2.66s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[21]   3.18s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"OpenSSL","version":"3.0.2"})
+[22]   3.18s  MCP →  tools/call (petición id=4)  buscar_cve({"producto": "OpenSSL", "version": "3.0.2"})
+[servidor] recibí tools/call buscar_cve(producto='OpenSSL', version='3.0.2')
+[servidor] devuelvo 1 CVE (CVE-2022-3602) · 179 caracteres · 0.1 ms
+[23]   3.18s  MCP ←  respuesta id=4: 1 CVE (CVE-2022-3602)
+[24]   3.18s  LLM →  vuelta 3: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[25]   4.13s  LLM ←  respuesta final, sin pedir herramientas
+  api-integracion      2 llamadas · 2 CVE reportados de 2 esperados (2.3 s)
+[26]   4.13s  INFO   ── activo jump-host-01: OpenSSH 8.9p1
+[27]   4.13s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[28]   4.68s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"OpenSSH","version":"8.9p1"})
+[29]   4.68s  MCP →  tools/call (petición id=5)  buscar_cve({"producto": "OpenSSH", "version": "8.9p1"})
+[servidor] recibí tools/call buscar_cve(producto='OpenSSH', version='8.9p1')
+[servidor] devuelvo 2 CVE (CVE-2024-6387, CVE-2023-38408) · 419 caracteres · 0.1 ms
+[30]   4.68s  MCP ←  respuesta id=5: 2 CVE (CVE-2024-6387, CVE-2023-38408)
+[31]   4.69s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[32]   5.78s  LLM ←  respuesta final, sin pedir herramientas
+  jump-host-01         1 llamadas · 2 CVE reportados de 2 esperados (1.7 s)
+[33]   5.78s  INFO   ── activo lab-pruebas-07: Tomcat 9.0.30, log4j-core 2.14.1
+[34]   5.78s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[35]   6.40s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"Tomcat","version":"9.0.30"})
+[36]   6.40s  MCP →  tools/call (petición id=6)  buscar_cve({"producto": "Tomcat", "version": "9.0.30"})
+[servidor] recibí tools/call buscar_cve(producto='Tomcat', version='9.0.30')
+[servidor] devuelvo 1 CVE (CVE-2020-1938) · 198 caracteres · 0.1 ms
+[37]   6.40s  MCP ←  respuesta id=6: 1 CVE (CVE-2020-1938)
+[38]   6.40s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[39]   6.95s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"log4j-core","version":"2.14.1"})
+[40]   6.95s  MCP →  tools/call (petición id=7)  buscar_cve({"producto": "log4j-core", "version": "2.14.1"})
+[servidor] recibí tools/call buscar_cve(producto='log4j-core', version='2.14.1')
+[servidor] devuelvo 2 CVE (CVE-2021-44228, CVE-2021-45046) · 368 caracteres · 0.0 ms
+[41]   6.95s  MCP ←  respuesta id=7: 2 CVE (CVE-2021-44228, CVE-2021-45046)
+[42]   6.95s  LLM →  vuelta 3: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[43]   8.37s  LLM ←  respuesta final, sin pedir herramientas
+  lab-pruebas-07       2 llamadas · 3 CVE reportados de 3 esperados (2.6 s)
+[44]   8.37s  INFO   ── activo grafana-mon: Grafana 8.2.6
+[45]   8.37s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+    (límite por minuto del proveedor: espero 20 s y reintento)
+[46]  29.18s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"Grafana","version":"8.2.6"})
+[47]  29.18s  MCP →  tools/call (petición id=8)  buscar_cve({"producto": "Grafana", "version": "8.2.6"})
+[servidor] recibí tools/call buscar_cve(producto='Grafana', version='8.2.6')
+[servidor] devuelvo 1 CVE (CVE-2021-43798) · 206 caracteres · 0.4 ms
+[48]  29.18s  MCP ←  respuesta id=8: 1 CVE (CVE-2021-43798)
+[49]  29.19s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[50]  29.91s  LLM ←  respuesta final, sin pedir herramientas
+  grafana-mon          1 llamadas · 1 CVE reportados de 1 esperados (21.5 s)
+[51]  29.91s  INFO   ── activo jenkins-ci: Jenkins LTS 2.426.1
+[52]  29.91s  LLM →  vuelta 1: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[53]  30.64s  LLM ←  pide 1 llamada(s): buscar_cve({"producto":"Jenkins LTS","version":"2.426.1"})
+[54]  30.64s  MCP →  tools/call (petición id=9)  buscar_cve({"producto": "Jenkins LTS", "version": "2.426.1"})
+[servidor] recibí tools/call buscar_cve(producto='Jenkins LTS', version='2.426.1')
+[servidor] devuelvo 1 CVE (CVE-2024-23897) · 212 caracteres · 0.1 ms
+[55]  30.64s  MCP ←  respuesta id=9: 1 CVE (CVE-2024-23897)
+[56]  30.64s  LLM →  vuelta 2: se envían 2 mensaje(s) nuevo(s) y 1 herramienta(s)
+[57]  31.71s  LLM ←  respuesta final, sin pedir herramientas
+  jenkins-ci           1 llamadas · 1 CVE reportados de 1 esperados (1.8 s)
+
+11 CVE reportados · 0 agregados por el modelo sin respaldo de la herramienta · 32 s
+Detalle en salidas/cve_herramienta_groq_oss.xlsx · registro MCP (57 eventos) en salidas/mcp_registro_groq_oss.jsonl
+(venv) (base) developer@Developers-MacBook-Pro clase07_inventario % python escalon_3_validar.py    
+Inventario: inventario_groq_oss.json · 8 combinaciones producto-versión
+Preguntando al modelo 'groq_oss' SIN herramienta...
+
+  Apache 2.4.49: 2 propuestos
+  Grafana 8.2.6: 2 propuestos
+  Jenkins LTS 2.426.1: 0 propuestos
+  OpenSSH 8.9p1: 0 propuestos
+  OpenSSL 3.0.2: 2 propuestos
+  Tomcat 9.0.30: 3 propuestos
+    (límite por minuto del proveedor: espero 3 s y reintento)
+    (límite por minuto del proveedor: espero 3 s y reintento)
+  log4j-core 2.14.1: 6 propuestos
+    (límite por minuto del proveedor: espero 4 s y reintento)
+    (límite por minuto del proveedor: espero 3 s y reintento)
+  nginx 1.18.0: 3 propuestos
+
+Resumen de la validación:
+Validación                   Existe, pero no aplica a esa versión  Sin verificar (no está en el caché; usen --en-linea)  Verificado (aplica)  Total % confiable
+Método                                                                                                                                                         
+Con herramienta (escalón 2)                                     0                                                     0                   11     11        100%
+Sin herramienta                                                 1                                                    10                    7     18         39%
+
+Top 5 del plan priorizado:
+ Prioridad          Activo            CVE  CVSS  Puntaje
+         1   backup-nas-01 CVE-2021-42013   9.8      9.8
+         2      jenkins-ci CVE-2024-23897   9.8      9.8
+         3    jump-host-01 CVE-2023-38408   9.8      9.8
+         4    jump-host-01  CVE-2024-6387   8.1      8.1
+         5 api-integracion CVE-2021-23017   7.7      7.7
+
+Archivos: salidas/validacion_groq_oss.xlsx y salidas/plan_priorizado_groq_oss.xlsx
