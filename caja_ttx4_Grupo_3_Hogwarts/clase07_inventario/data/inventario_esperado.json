@@ -1,0 +1,180 @@
+{
+ "nota": "Referencia para el caso Universidad de Hogwarts (TTX #4). El duplicado SCAN-305 debe unirse.",
+ "activos": [
+  {
+   "hostname": "sga-app-02",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Windows Server 2012 R2",
+   "software": [],
+   "responsable": "TI",
+   "criticidad": "Alta",
+   "origen": [
+    "CMDB-0101"
+   ]
+  },
+  {
+   "hostname": "vpn-gw-prov",
+   "tipo": "Equipo de red",
+   "entorno": "Producción",
+   "sistema_operativo": "FortiOS 7.0.10",
+   "software": [
+    {
+     "producto": "FortiOS",
+     "version": "7.0.10"
+    }
+   ],
+   "responsable": "Redes",
+   "criticidad": "Alta",
+   "origen": [
+    "SCAN-301"
+   ]
+  },
+  {
+   "hostname": "backup-nas-01",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Debian 11",
+   "software": [
+    {
+     "producto": "Apache HTTP Server",
+     "version": "2.4.49"
+    }
+   ],
+   "responsable": "TI",
+   "criticidad": "Alta",
+   "origen": [
+    "TI-210"
+   ]
+  },
+  {
+   "hostname": "files-01",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Windows Server 2016",
+   "software": [],
+   "responsable": "TI",
+   "criticidad": "Alta",
+   "origen": [
+    "TI-211"
+   ]
+  },
+  {
+   "hostname": "files-02",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Windows Server 2016",
+   "software": [],
+   "responsable": "TI",
+   "criticidad": "Alta",
+   "origen": [
+    "CMDB-0102"
+   ]
+  },
+  {
+   "hostname": "api-integracion",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Ubuntu 22.04",
+   "software": [
+    {
+     "producto": "nginx",
+     "version": "1.18.0"
+    },
+    {
+     "producto": "OpenSSL",
+     "version": "3.0.2"
+    }
+   ],
+   "responsable": "Desarrollo",
+   "criticidad": "Alta",
+   "origen": [
+    "SCAN-305"
+   ]
+  },
+  {
+   "hostname": "jump-host-01",
+   "tipo": "Servidor",
+   "entorno": "Producción",
+   "sistema_operativo": "Ubuntu 22.04",
+   "software": [
+    {
+     "producto": "OpenSSH",
+     "version": "8.9p1"
+    }
+   ],
+   "responsable": "TI",
+   "criticidad": "Alta",
+   "origen": [
+    "TI-215"
+   ]
+  },
+  {
+   "hostname": "lab-pruebas-07",
+   "tipo": "Servidor",
+   "entorno": "Desarrollo",
+   "sistema_operativo": "Ubuntu 20.04",
+   "software": [
+    {
+     "producto": "Apache Tomcat",
+     "version": "9.0.30"
+    },
+    {
+     "producto": "log4j",
+     "version": "2.14.1"
+    }
+   ],
+   "responsable": "Desarrollo",
+   "criticidad": "Baja",
+   "origen": [
+    "TI-220"
+   ]
+  },
+  {
+   "hostname": "grafana-mon",
+   "tipo": "Servidor",
+   "entorno": "Herramientas",
+   "sistema_operativo": "Debian 11",
+   "software": [
+    {
+     "producto": "Grafana",
+     "version": "8.2.6"
+    }
+   ],
+   "responsable": "Infraestructura",
+   "criticidad": "Media",
+   "origen": [
+    "CMDB-0110"
+   ]
+  },
+  {
+   "hostname": "jenkins-ci",
+   "tipo": "Servidor",
+   "entorno": "Herramientas",
+   "sistema_operativo": "Ubuntu 20.04",
+   "software": [
+    {
+     "producto": "Jenkins",
+     "version": "2.426.1"
+    }
+   ],
+   "responsable": "Desarrollo",
+   "criticidad": "Alta",
+   "origen": [
+    "TI-230"
+   ]
+  },
+  {
+   "hostname": "nb-conta-03",
+   "tipo": "Estación de trabajo",
+   "entorno": "Estación de trabajo",
+   "sistema_operativo": "Windows 11 23H2",
+   "software": [],
+   "responsable": "Contabilidad",
+   "criticidad": "Baja",
+   "origen": [
+    "TI-240"
+   ]
+  }
+ ]
+}

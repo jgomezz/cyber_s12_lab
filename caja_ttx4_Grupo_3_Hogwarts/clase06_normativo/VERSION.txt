@@ -1,0 +1,10 @@
+Clase 6 · Laboratorio de políticas y análisis normativo con IA
+Versión 6.1 · octubre de 2026
+
+Cambios desde 6.0:
+- Sin Mistral (dejó de tener API gratuita).
+- Proveedores: Ollama Cloud (principal), Ollama Cloud 20b, Groq, NVIDIA y Ollama local (opcional).
+- Embeddings locales para el RAG (sin API ni descargas).
+- NVIDIA usa openai/gpt-oss-20b (el endpoint gratuito de llama-3.1-8b fue deprecado).
+- El cliente reintenta sin modo JSON si un proveedor no lo acepta.
+- diag_nvidia.py: diagnóstico de errores 401 de NVIDIA (clave, modelos disponibles y consulta real).

@@ -1,0 +1,8 @@
+usuario,nombre,cargo,area,grupos,privilegios,ip_habitual
+m.vera,Mónica Vera (ficticia),Directora de TI,TI,admins; vpn-admin,Administrador de dominio,10.33.20.10 (oficina)
+l.castro,Luis Castro (ficticio),Jefe de infraestructura,TI,admins; vpn-admin,Administrador de dominio,10.33.20.10 (oficina)
+aulanube-sync,Técnico de AulaNube (ficticio),Proveedor,AulaNube,vpn-proveedores; rdp-servidores,"Administrador local en sga-app-02, files-01 y files-02 (heredado del proyecto 2025) · único administrador de la aplicación del servicio crítico",203.0.113.30 (oficina de AulaNube)
+aulanube-sync2,Cuenta de respaldo de AulaNube,Proveedor,AulaNube,vpn-proveedores; rdp-servidores,"Administrador local en sga-app-02, files-01 y files-02 (heredado del proyecto 2025)",Sin uso registrado desde 2025
+adm-emergencia,Cuenta de emergencia (break-glass),-,TI,admins-app,Administrador de la aplicación en sga-app-02 · deshabilitada · contraseña en sobre sellado en la caja fuerte de TI desde 2021 · nunca probada · custodio: ex Jefe de Infraestructura (dejó la organización en 2024),-
+svc-backup,Cuenta de servicio de respaldos,Servicio,TI,backup-operators,Lectura en servidores; escritura en backup-nas-01,-
+soporte-impresoras,Proveedor de impresoras (ficticio),Proveedor,Impresoras SAC,vpn-proveedores,Sin acceso a servidores,203.0.113.55

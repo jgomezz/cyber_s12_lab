@@ -1,0 +1,5 @@
+id,fecha_hora,fuente,severidad,descripcion,usuario,host,estado
+A-0001,2026-11-24T07:28:16,EDR,Alta,Ejecutable no firmado upd_agent.exe con conexiones a un dominio desconocido en sga-app-02,,sga-app-02,Sin revisar
+A-0002,2026-11-24T01:03:00,DLP,Media,"Volumen alto (2,1 GB) en una transferencia nocturna hacia backup-nas-01",svc-backup,backup-nas-01,Sin revisar
+A-0003,2026-11-24T02:10:41,VPN,Baja,Inicio de sesión de proveedor fuera de la ventana de mantenimiento: aulanube-sync,aulanube-sync,vpn-gw-prov,Sin revisar
+A-0004,2026-11-23T20:15:09,EDR,Baja,Adware en cuarentena en nb-conta-03,,nb-conta-03,Cerrada

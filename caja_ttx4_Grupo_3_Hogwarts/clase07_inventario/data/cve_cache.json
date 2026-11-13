@@ -1,0 +1,300 @@
+{
+ "nota": "Caché de referencia preparado para el curso a partir de NVD (octubre 2026). Los rangos están simplificados. Verifiquen siempre en línea con --en-linea o en nvd.nist.gov.",
+ "alias": {
+  "log4j-core": "log4j",
+  "log4j2": "log4j",
+  "apache log4j": "log4j",
+  "httpd": "apache http server",
+  "apache": "apache http server",
+  "apache httpd": "apache http server",
+  "tomcat": "apache tomcat",
+  "fortigate": "fortios",
+  "fortios ssl-vpn": "fortios",
+  "jenkins lts": "jenkins",
+  "gitlab ce": "gitlab",
+  "gitlab ee": "gitlab",
+  "spring": "spring framework",
+  "postgres": "postgresql",
+  "sshd": "openssh"
+ },
+ "fin_de_soporte": {
+  "windows server 2012 r2": "2023-10-10",
+  "ubuntu 20.04": "2025-05-31",
+  "debian 11": "2026-08-31"
+ },
+ "cves": [
+  {
+   "cve": "CVE-2021-44228",
+   "producto": "log4j",
+   "rangos": [
+    [
+     "2.0.0",
+     "2.14.1"
+    ]
+   ],
+   "versiones_afectadas": "2.0-beta9 a 2.14.1",
+   "cvss": 10.0,
+   "descripcion": "Log4Shell: ejecución remota de código mediante búsquedas JNDI en mensajes registrados."
+  },
+  {
+   "cve": "CVE-2021-45046",
+   "producto": "log4j",
+   "rangos": [
+    [
+     "2.0.0",
+     "2.15.0"
+    ]
+   ],
+   "versiones_afectadas": "2.0-beta9 a 2.15.0",
+   "cvss": 9.0,
+   "descripcion": "Corrección incompleta de Log4Shell en configuraciones no predeterminadas."
+  },
+  {
+   "cve": "CVE-2024-6387",
+   "producto": "openssh",
+   "rangos": [
+    [
+     "8.5.1",
+     "9.7.1"
+    ]
+   ],
+   "versiones_afectadas": "8.5p1 a 9.7p1",
+   "cvss": 8.1,
+   "descripcion": "regreSSHion: condición de carrera en el manejador de señales de sshd que permite ejecución remota de código."
+  },
+  {
+   "cve": "CVE-2023-38408",
+   "producto": "openssh",
+   "rangos": [
+    [
+     "0",
+     "9.3.1"
+    ]
+   ],
+   "versiones_afectadas": "anteriores a 9.3p2",
+   "cvss": 9.8,
+   "descripcion": "Ejecución remota de código en ssh-agent cuando se reenvía el agente a un servidor controlado por el atacante."
+  },
+  {
+   "cve": "CVE-2014-0160",
+   "producto": "openssl",
+   "rangos": [
+    [
+     "1.0.1",
+     "1.0.1"
+    ]
+   ],
+   "versiones_afectadas": "1.0.1 a 1.0.1f",
+   "cvss": 7.5,
+   "descripcion": "Heartbleed: lectura de memoria del servidor mediante la extensión heartbeat de TLS."
+  },
+  {
+   "cve": "CVE-2022-0778",
+   "producto": "openssl",
+   "rangos": [
+    [
+     "1.0.2",
+     "1.0.2"
+    ],
+    [
+     "1.1.1",
+     "1.1.1"
+    ],
+    [
+     "3.0.0",
+     "3.0.1"
+    ]
+   ],
+   "versiones_afectadas": "1.0.2 a 1.0.2zc, 1.1.1 a 1.1.1m, 3.0.0 a 3.0.1",
+   "cvss": 7.5,
+   "descripcion": "Bucle infinito en BN_mod_sqrt() al procesar certificados manipulados (denegación de servicio)."
+  },
+  {
+   "cve": "CVE-2022-3602",
+   "producto": "openssl",
+   "rangos": [
+    [
+     "3.0.0",
+     "3.0.6"
+    ]
+   ],
+   "versiones_afectadas": "3.0.0 a 3.0.6",
+   "cvss": 7.5,
+   "descripcion": "Desbordamiento de búfer al verificar direcciones de correo en certificados X.509."
+  },
+  {
+   "cve": "CVE-2021-23017",
+   "producto": "nginx",
+   "rangos": [
+    [
+     "0.6.18",
+     "1.20.0"
+    ]
+   ],
+   "versiones_afectadas": "0.6.18 a 1.20.0",
+   "cvss": 7.7,
+   "descripcion": "Error de un byte en el resolvedor DNS de nginx que puede causar ejecución de código o caída."
+  },
+  {
+   "cve": "CVE-2024-23897",
+   "producto": "jenkins",
+   "rangos": [
+    [
+     "0",
+     "2.441"
+    ]
+   ],
+   "versiones_afectadas": "hasta 2.441 y LTS hasta 2.426.2",
+   "cvss": 9.8,
+   "descripcion": "Lectura arbitraria de archivos del controlador a través del analizador de argumentos de la CLI."
+  },
+  {
+   "cve": "CVE-2023-7028",
+   "producto": "gitlab",
+   "rangos": [
+    [
+     "16.1.0",
+     "16.7.1"
+    ]
+   ],
+   "versiones_afectadas": "16.1 a 16.7.1 (según la rama; simplificado)",
+   "cvss": 10.0,
+   "descripcion": "Restablecimiento de contraseña enviado a un correo no verificado: toma de control de cuentas."
+  },
+  {
+   "cve": "CVE-2023-27997",
+   "producto": "fortios",
+   "rangos": [
+    [
+     "6.0.0",
+     "6.0.16"
+    ],
+    [
+     "6.2.0",
+     "6.2.13"
+    ],
+    [
+     "6.4.0",
+     "6.4.12"
+    ],
+    [
+     "7.0.0",
+     "7.0.11"
+    ],
+    [
+     "7.2.0",
+     "7.2.4"
+    ]
+   ],
+   "versiones_afectadas": "6.0 a 7.2.4 según la rama (7.0.0 a 7.0.11)",
+   "cvss": 9.8,
+   "descripcion": "Desbordamiento de memoria en la SSL-VPN que permite ejecución remota de código sin autenticación."
+  },
+  {
+   "cve": "CVE-2021-43798",
+   "producto": "grafana",
+   "rangos": [
+    [
+     "8.0.0",
+     "8.3.0"
+    ]
+   ],
+   "versiones_afectadas": "8.0.0-beta1 a 8.3.0",
+   "cvss": 7.5,
+   "descripcion": "Recorrido de directorios en las rutas de plugins: lectura de archivos del servidor sin autenticación."
+  },
+  {
+   "cve": "CVE-2021-41773",
+   "producto": "apache http server",
+   "rangos": [
+    [
+     "2.4.49",
+     "2.4.49"
+    ]
+   ],
+   "versiones_afectadas": "2.4.49",
+   "cvss": 7.5,
+   "descripcion": "Recorrido de rutas y divulgación de archivos en Apache HTTP Server 2.4.49."
+  },
+  {
+   "cve": "CVE-2021-42013",
+   "producto": "apache http server",
+   "rangos": [
+    [
+     "2.4.49",
+     "2.4.50"
+    ]
+   ],
+   "versiones_afectadas": "2.4.49 y 2.4.50",
+   "cvss": 9.8,
+   "descripcion": "Corrección incompleta de CVE-2021-41773: recorrido de rutas y ejecución remota de código."
+  },
+  {
+   "cve": "CVE-2020-1938",
+   "producto": "apache tomcat",
+   "rangos": [
+    [
+     "7.0.0",
+     "7.0.99"
+    ],
+    [
+     "8.5.0",
+     "8.5.50"
+    ],
+    [
+     "9.0.0",
+     "9.0.30"
+    ]
+   ],
+   "versiones_afectadas": "7.0.0 a 7.0.99, 8.5.0 a 8.5.50, 9.0.0 a 9.0.30",
+   "cvss": 9.8,
+   "descripcion": "Ghostcat: lectura e inclusión de archivos mediante el conector AJP."
+  },
+  {
+   "cve": "CVE-2022-22965",
+   "producto": "spring framework",
+   "rangos": [
+    [
+     "5.2.0",
+     "5.2.19"
+    ],
+    [
+     "5.3.0",
+     "5.3.17"
+    ]
+   ],
+   "versiones_afectadas": "5.2.0 a 5.2.19, 5.3.0 a 5.3.17",
+   "cvss": 9.8,
+   "descripcion": "Spring4Shell: ejecución remota de código por enlace de datos en JDK 9+ desplegado como WAR en Tomcat."
+  },
+  {
+   "cve": "CVE-2024-10979",
+   "producto": "postgresql",
+   "rangos": [
+    [
+     "12.0",
+     "12.20"
+    ],
+    [
+     "13.0",
+     "13.16"
+    ],
+    [
+     "14.0",
+     "14.13"
+    ],
+    [
+     "15.0",
+     "15.8"
+    ],
+    [
+     "16.0",
+     "16.4"
+    ]
+   ],
+   "versiones_afectadas": "anteriores a 17.1, 16.5, 15.9, 14.14, 13.17 y 12.21",
+   "cvss": 8.8,
+   "descripcion": "Variables de entorno manipulables desde PL/Perl por un usuario sin privilegios."
+  }
+ ]
+}

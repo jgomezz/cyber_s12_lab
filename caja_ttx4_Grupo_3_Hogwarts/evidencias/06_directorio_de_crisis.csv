@@ -1,0 +1,11 @@
+# Directorio de crisis de Universidad de Hogwarts (ficticio). Revisión anual exigida por la política: última revisión 2023-03-15.
+rol,nombre,organizacion,telefono,correo,ultima_verificacion,nota
+Líder del incidente,Mónica Vera (ficticia),Universidad de Hogwarts,+51 1 555 0101,m.vera@org.example,2023-03-15,
+Seguridad del proveedor,Marco Valdivia (ficticio),AulaNube,+51 1 555 0142,marco.valdivia@aulanube.example,2022-03-01,Copiado del Anexo C del contrato
+Mesa 24x7 del proveedor,-,AulaNube,+51 1 555 0199,soporte24@aulanube.example,2022-03-01,Copiado del Anexo C del contrato
+Asesor legal externo,Estudio Quispe & Asociados (ficticio),-,+51 1 555 0170,socio@quispe.example,2023-03-15,Contrato de asesoría terminado en 2024
+Aseguradora de ciberriesgos,Póliza CR-2023-0457 (ficticia),Andina Seguros (ficticia),+51 1 555 0188,siniestros@andinaseguros.example,2023-03-15,Vigencia de la póliza: 2023-04-01 a 2024-03-31
+Autoridad de datos personales,ANPD,MINJUSDH,-,-,2023-03-15,Verificar el canal vigente de notificación
+Centro Nacional de Seguridad Digital,CNSD,PCM,-,-,2023-03-15,Verificar el canal vigente de reporte
+Supervisor del sector,SUNEDU,-,-,-,2023-03-15,
+Comunicaciones,Vacante,Universidad de Hogwarts,-,-,2023-03-15,Cargo vacante desde 2025

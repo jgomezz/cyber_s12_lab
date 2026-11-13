@@ -1,0 +1,6 @@
+indicador,tipo,descripcion,confianza,fuente,visto_desde
+198.51.100.200,ip,Servidor de comando y control asociado a ransomware con doble extorsión,Alta,Feed comercial de inteligencia,2026-10-30
+update-cdn-sync.example,dominio,Dominio de comando y control del grupo Zeta (imita un CDN),Alta,Feed comercial de inteligencia,2026-11-02
+198.51.100.99,ip,Nodo de un servicio de VPN comercial usado como proxy anónimo,Media,Feed abierto,2026-09-14
+203.0.113.55,ip,Proveedor de impresoras (lista blanca),Baja,Inventario de proveedores,2025-01-10
+198.51.100.200,ip,lista blanca «CDN de AulaNube» (ticket del proveedor PRV-2291),Baja,Solicitud de AulaNube,2026-11-23

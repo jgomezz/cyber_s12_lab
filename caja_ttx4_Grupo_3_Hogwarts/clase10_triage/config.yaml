@@ -1,0 +1,80 @@
+# Clase 10 · Configuración del laboratorio
+# Triage asistido por IA de la alerta A-0001 de Andina Pagos.
+# Para cambiar de modelo, edita solo "model". El proveedor por defecto se usa
+# cuando no indicas --proveedor al ejecutar un escalón.
+#
+# Todos los modelos del laboratorio son de pesos abiertos (open weight): se pueden descargar
+# y ejecutar en infraestructura propia. Los campos "familia", "tamano" y "licencia" son solo
+# informativos y aparecen en la comparación del escalón 2.
+default: groq_oss
+
+providers:
+  ollama_cloud:          # PRINCIPAL del curso: modelos grandes en ollama.com (cuenta gratuita, 1 consulta a la vez)
+    model: openai/gpt-oss:120b
+    api_base: https://ollama.com/v1
+    api_key_env: OLLAMA_API_KEY
+    familia: gpt-oss (OpenAI)
+    tamano: 117B (5,1B activos por token)
+    licencia: Apache 2.0
+
+  ollama_cloud_20b:      # Segundo modelo en la misma cuenta de Ollama Cloud (más pequeño, para comparar)
+    model: openai/gpt-oss:20b
+    api_base: https://ollama.com/v1
+    api_key_env: OLLAMA_API_KEY
+    familia: gpt-oss (OpenAI)
+    tamano: 21B (3,6B activos por token)
+    licencia: Apache 2.0
+
+  groq_oss:              # console.groq.com · RESPALDO del principal: el mismo gpt-oss-120b en el plan gratuito de Groq
+    model: groq/openai/gpt-oss-120b
+    api_key_env: GROQ_API_KEY
+    familia: gpt-oss (OpenAI)
+    tamano: 117B (5,1B activos por token)
+    licencia: Apache 2.0
+
+  groq:                  # console.groq.com · rápido y de otra familia: el segundo modelo de las comparaciones
+    model: groq/qwen/qwen3.8-27b
+    api_key_env: GROQ_API_KEY
+    familia: Qwen (Alibaba)
+    tamano: 27B
+    licencia: ver la ficha del modelo
+
+  groq_llama:            # Tercera familia, en la misma cuenta de Groq (si el modelo sigue en el plan gratuito)
+    model: groq/llama-3.3-70b-versatile
+    api_key_env: GROQ_API_KEY
+    familia: Llama (Meta)
+    tamano: 70B
+    licencia: Llama 3.3 Community License
+
+  nvidia:                # build.nvidia.com · endpoint gratuito (el catálogo cambia: si falla, elijan otro modelo con "Free Endpoint")
+    model: openai/openai/gpt-oss-20b
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key_env: NVIDIA_API_KEY
+    familia: gpt-oss (OpenAI)
+    tamano: 21B (3,6B activos por token)
+    licencia: Apache 2.0
+
+  # Modelos locales: "num_ctx" amplía la ventana de contexto de Ollama (por defecto 4096 tokens,
+  # y el expediente del triage ocupa ~7.500: sin esto Ollama recorta el prompt y el triage sale vacío).
+  # "timeout" (segundos) da más tiempo de respuesta, porque en un equipo personal tardan varios minutos.
+  # easoc: el modelo publicado (Arnos/easoc-triage) trae una plantilla "{{ .Prompt }}" que descarta el
+  # prompt de sistema, corta en "```" (responde vacío) y limita a 512 tokens. Se usa una variante corregida:
+  #   ollama pull Arnos/easoc-triage
+  #   ollama create easoc-triage-chat -f Modelfile.easoc
+  ollama_local_easoc:          # OPCIONAL: solo si tu equipo tiene 16 GB de RAM o GPU
+    model: ollama_chat/easoc-triage-chat
+    api_base: http://localhost:11434
+    num_ctx: 16384
+    timeout: 900
+    familia: Llama (Meta)
+    tamano: 8B
+    licencia: Llama 3 Community License
+
+  ollama_local_gemma4:          # OPCIONAL: solo si tu equipo tiene 16 GB de RAM o GPU ("ollama pull gemma4:12b")
+    model: ollama_chat/gemma4:12b
+    api_base: http://localhost:11434
+    num_ctx: 16384
+    timeout: 900
+    familia: Gemma (Google)
+    tamano: 12B
+    licencia: Gemma Terms of Use

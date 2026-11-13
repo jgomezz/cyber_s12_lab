@@ -1,0 +1,11 @@
+hostname,ip,tipo,entorno,descripcion,responsable,criticidad
+sga-app-02,10.33.5.11,Servidor,Producción,Windows Server 2012 R2 · aplicación principal del servicio crítico,TI,Alta
+files-01,10.33.5.21,Servidor,Producción,Windows Server 2016 · archivos compartidos de áreas,TI,Alta
+files-02,10.33.5.22,Servidor,Producción,Windows Server 2016 · archivos de gerencia y Legal,TI,Alta
+backup-nas-01,10.33.5.40,Servidor,Producción,Debian 11 · NAS de respaldos en línea (recibe el respaldo nocturno),TI,Alta
+vpn-gw-prov,10.33.0.2,Equipo de red,Producción,FortiGate · VPN de proveedores (vpn-socios.hogwarts.example) · perfil de terceros sin MFA exigido,Redes,Alta
+api-integracion,10.33.6.10,Servidor,Producción,Ubuntu 22.04 · API de integración con AulaNube (sync_matricula.py),Desarrollo,Alta
+jump-host-01,10.33.0.9,Servidor,Producción,Ubuntu 22.04 · salto de administradores,TI,Alta
+correo,10.33.1.5,Servidor,Producción,Correo corporativo,TI,Media
+lab-pruebas-07,10.33.9.7,Servidor,Desarrollo,Laboratorio aislado de pruebas,Desarrollo,Baja
+nb-conta-03,10.33.20.33,Estación de trabajo,Oficina,Notebook de Contabilidad,Contabilidad,Baja
